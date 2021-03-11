@@ -37,6 +37,12 @@ class SplashHomePageState extends State<SplashHomePage>
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    controller.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
 
